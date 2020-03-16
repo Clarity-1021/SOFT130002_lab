@@ -6,7 +6,18 @@
 <meta name="description" content="Interesting Q&A." />
 <meta name="keywords" content="question, problem, quiz, affiar, event" />
 <link rel="stylesheet" href="css/style.css" />
-<base target="_self" /><!--默认超链接点击打开新窗口-->
+<script type="text/javascript">
+<!--
+    function checkRadio(objRadio) {
+        if(objRadio[0].checked) {
+            return true;
+        }
+        alert("NO Checked!");
+        return false;
+    }
+//-->
+</script>
+<base target="_self" />
 <body>
     <nav>
         <h3>
@@ -18,7 +29,7 @@
         </h3>
     </nav>
     <h1>创建账户</h1>
-    <form action="#" method="POST" autocomplete="on">
+    <form onsubmit="return checkRadio(this.agreeradios);" action="#" method="POST" autocomplete="on">
         <p>
             用户名：<br />
             <input type="text" required placeholder="大小写英文字母、数字和下划线" name="username" autofocus pattern="^[A-z0-9_]+$" />
@@ -33,44 +44,42 @@
         </p> 
         <p>
             居住地：<br />
-            <form>
-                <select name="livingaddr">
-                    <option value="beijing">北京</option>
-                    <option value="shanghai" selected="selected">上海</option>
-                    <option value="tianjing">天津</option>
-                    <option value="chongqing">重庆</option>
-                    <option value="heilongjiang">黑龙江</option>
-                    <option value="jiling">吉林</option>
-                    <option value="liaoning">辽宁</option>
-                    <option value="neimenggu">内蒙古</option>
-                    <option value="hebei">河北</option>
-                    <option value="xinjiang">新疆</option>
-                    <option value="gansu">甘肃</option>
-                    <option value="qinghai">青海</option>
-                    <option value="shanxi">陕西</option>
-                    <option value="ningxia">宁夏</option>
-                    <option value="henan">河南</option>
-                    <option value="shandong">山东</option>
-                    <option value="shanxi">山西</option>
-                    <option value="anhui">安徽</option>
-                    <option value="hubei">湖北</option>
-                    <option value="hunan">湖南</option>
-                    <option value="jiangsu">江苏</option>
-                    <option value="sichuang">四川</option>
-                    <option value="guizhou">贵州</option>
-                    <option value="yunnnan">云南</option>
-                    <option value="guangxi">广西</option>
-                    <option value="xizang">西藏</option>
-                    <option value="zhejiang">浙江</option>
-                    <option value="jiangxi">江西</option>
-                    <option value="guangdong">广东</option>
-                    <option value="fujian">福建</option>
-                    <option value="taiwan">台湾</option>
-                    <option value="hainan">海南</option>
-                    <option value="xianggang">香港</option>
-                    <option value="aomen">澳门</option>
-                </select>
-            </form>
+            <select name="livingaddr">
+                <option value="beijing">北京</option>
+                <option value="shanghai" selected="selected">上海</option>
+                <option value="tianjing">天津</option>
+                <option value="chongqing">重庆</option>
+                <option value="heilongjiang">黑龙江</option>
+                <option value="jiling">吉林</option>
+                <option value="liaoning">辽宁</option>
+                <option value="neimenggu">内蒙古</option>
+                <option value="hebei">河北</option>
+                <option value="xinjiang">新疆</option>
+                <option value="gansu">甘肃</option>
+                <option value="qinghai">青海</option>
+                <option value="shanxi">陕西</option>
+                <option value="ningxia">宁夏</option>
+                <option value="henan">河南</option>
+                <option value="shandong">山东</option>
+                <option value="shanxi">山西</option>
+                <option value="anhui">安徽</option>
+                <option value="hubei">湖北</option>
+                <option value="hunan">湖南</option>
+                <option value="jiangsu">江苏</option>
+                <option value="sichuang">四川</option>
+                <option value="guizhou">贵州</option>
+                <option value="yunnnan">云南</option>
+                <option value="guangxi">广西</option>
+                <option value="xizang">西藏</option>
+                <option value="zhejiang">浙江</option>
+                <option value="jiangxi">江西</option>
+                <option value="guangdong">广东</option>
+                <option value="fujian">福建</option>
+                <option value="taiwan">台湾</option>
+                <option value="hainan">海南</option>
+                <option value="xianggang">香港</option>
+                <option value="aomen">澳门</option>
+            </select>
         </p>
         <p>
             手机号：<br />
@@ -116,8 +125,8 @@
 机构用户同意遵守知乎机构号服务协议，以及知乎机构号使用规范（试行）。
 知乎有权对用户使用知乎的情况进行审查和监督，如用户在使用知乎时违反任何上述规定，知乎或其授权的人有权要求用户改正或直接采取一切必要的措施（包括但不限于更改或删除用户张贴的内容、暂停或终止用户使用知乎的权利）以减轻用户不当行为造成的影响。
             </textarea>
-            <br />同意<input type="radio" checked="checked" name="agreebutton" value="agree" />
-            不同意<input type="radio" name="agreebutton" value="disagree" />
+            <br />同意<input type="radio" checked name="agreeradios" value="agree" />
+            不同意<input type="radio" name="agreeradios" value="disagree" />
         </p>
         <p>
             验证码：
