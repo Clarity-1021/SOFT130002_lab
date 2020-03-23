@@ -1,0 +1,27 @@
+#new-counter{
+    text-align: center;
+    height: 47px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: x-large;
+}
+
+.container{
+    margin: 10px auto;
+    width: 870px;
+    background: white;
+    padding: 20px 30px 50px 30px;
+    line-height: 50px;
+}
+
+h4{
+    font-weight: bold;
+}
+
+.container-left{
+    width: 110px;
+    float: left;
+}
+#check-code{
+    margin-top: 157px;
+}

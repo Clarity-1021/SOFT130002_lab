@@ -1,0 +1,59 @@
+body{
+    width: 100%;
+    background: #f6f6f6;
+}
+
+#logo{
+    padding: 0;
+    border: none;
+}
+
+nav{
+    width: 100%;
+    background: white;
+}
+
+.container-nav{
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav a{
+    cursor:pointer;
+    text-decoration: none;
+    color: rgba(0, 128, 0, 0.644);
+    padding: 15px 30px;
+    display: inline-block;
+}
+
+nav a:link, nav a:visited{
+    border-bottom-style: solid;
+    border-width: 4px;
+    border-color: transparent;
+}
+
+nav a:hover,nav a:active{
+    color: white;
+    background: rgba(0, 128, 0, 0.24);
+    border-color: rgba(0, 128, 0, 0.644);
+}
+
+.left-nav{
+    display: inline-block;
+}
+
+.right-nav{
+    float: right;
+    display: inline-block;
+}
+
+.shadowed{
+    box-shadow:0px 1px 5px #dddddd;
+}
+
+.deep-green{
+    color: rgb(0, 128, 0);
+}
+
+
+

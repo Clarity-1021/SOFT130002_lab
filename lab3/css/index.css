@@ -1,0 +1,65 @@
+.left-box{
+    float: left;
+    margin: 10px 15px;
+    background: white;
+    width: 700px;
+}
+
+.container{
+    width: 940px;
+    margin: 0 auto;
+}
+
+h4{
+    font-size: large;
+    font-weight: bold;
+}
+
+section{
+    padding: 20px 20px;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #eeeeee;
+}
+
+section p{
+    padding: 15px 0 20px 0;
+    word-wrap: break-word;
+}
+
+.agree-button:hover{
+    background: rgba(0, 128, 0, 0.17);
+    cursor:pointer
+}
+
+.agree-button{
+    background: rgba(0, 128, 0, 0.12);
+    margin: 3px;
+    padding: 6px 18px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.right-box{
+    float: left;
+    padding: 10px;
+    margin: 10px 0px 10px -4px;
+    background: white;
+    width: 190px;
+    height: 200px;
+}
+
+.right-box h4 a{
+    text-decoration: none;
+    color: black;
+    line-height: 50px;
+}
+
+.right-box h4 a:hover, .right-box h4 a:active{
+    color: rgb(0, 128, 0);
+}
+
+.page-num{
+    padding: 0;
+    text-align: center;
+}

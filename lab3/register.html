@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang = "zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <base target="_self" />
+    <title>注册</title>
+</head>
+
+<body>
+    <nav class="shadowed">
+        <div class="container-nav">
+            <div class="left-nav">
+                <div id="new-counter" class="deep-green">创建账户</div>
+            </div>
+            <div class="right-nav">
+                <a href="./index.html">主页</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container shadowed">
+        <div class="container-left">
+            <h4>用户名：</h4>
+            <h4>密码：</h4>
+            <h4>确认密码：</h4>
+            <h4>居住地：</h4>
+            <h4>手机号：</h4>
+            <h4>常用设备：</h4>
+            <h4>注册条款：</h4>
+            <h4 id="check-code">验证码：</h4>
+        </div>
+
+        <form onsubmit="return checkRadio(this.agreeradios);" action="#" method="POST" autocomplete="on">
+
+            <input type="text" required placeholder="大小写英文字母、数字和下划线" name="username" autofocus pattern="^[A-z0-9_]+$" />
+
+            <br /><input type="password" required placeholder="8位以上的小写字母和数字" name="passport" pattern="[A-z0-9].{8,}" />
+
+            <br /><input type="password" required placeholder="8位以上的小写字母和数字" name="passport-check" pattern="[A-z0-9].{8,}" />
+
+            <br /><select name="live-addr">
+                    <option value="beijing">北京</option>
+                    <option value="shanghai" selected="selected">上海</option>
+                    <option value="tianjing">天津</option>
+                    <option value="chongqing">重庆</option>
+                    <option value="heilongjiang">黑龙江</option>
+                    <option value="jiling">吉林</option>
+                    <option value="liaoning">辽宁</option>
+                    <option value="neimenggu">内蒙古</option>
+                    <option value="hebei">河北</option>
+                    <option value="xinjiang">新疆</option>
+                    <option value="gansu">甘肃</option>
+                    <option value="qinghai">青海</option>
+                    <option value="shanxi">陕西</option>
+                    <option value="ningxia">宁夏</option>
+                    <option value="henan">河南</option>
+                    <option value="shandong">山东</option>
+                    <option value="shanxi">山西</option>
+                    <option value="anhui">安徽</option>
+                    <option value="hubei">湖北</option>
+                    <option value="hunan">湖南</option>
+                    <option value="jiangsu">江苏</option>
+                    <option value="sichuang">四川</option>
+                    <option value="guizhou">贵州</option>
+                    <option value="yunnnan">云南</option>
+                    <option value="guangxi">广西</option>
+                    <option value="xizang">西藏</option>
+                    <option value="zhejiang">浙江</option>
+                    <option value="jiangxi">江西</option>
+                    <option value="guangdong">广东</option>
+                    <option value="fujian">福建</option>
+                    <option value="taiwan">台湾</option>
+                    <option value="hainan">海南</option>
+                    <option value="xianggang">香港</option>
+                    <option value="aomen">澳门</option>
+                </select>
+
+            <br /><input type="tel" required placeholder="开头为1的手机号码" name="phone-num" pattern="^1\d{10}$"/>
+
+            <br /><input type="checkbox" name="device-android" value="android" />安卓手机
+            <input type="checkbox" name="device-iphone" value="iphone" />iphone
+            <input type="checkbox" name="device-windows" value="windows" />Windows
+            <input type="checkbox" name="device-mac" value="mac" />Mac
+
+            <br /><textarea disabled="true" rows="10" cols="36">
+欢迎您来到知乎。
+
+请您仔细阅读以下条款，如果您对本协议的任何条款表示异议，您可以选择不进入知乎。当您注册成功，无论是进入知乎，还是在知乎上发布任何内容（即「内容」），均意味着您（即「用户」）完全接受本协议项下的全部条款。
+
+使用规则
+用户注册成功后，知乎将给予每个用户一个用户帐号及相应的密码，该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。
+用户须对在知乎的注册信息的真实性、合法性、有效性承担全部责任，用户不得冒充他人；不得利用他人的名义发布任何信息；不得恶意使用注册帐号导致其他用户误认；否则知乎有权立即停止提供服务，收回其帐号并由用户独自承担由此而产生的一切法律责任。
+用户直接或通过各类方式（如 RSS 源和站外 API 引用等）间接使用知乎服务和数据的行为，都将被视作已无条件接受本协议全部内容；若用户对本协议的任何条款存在异议，请停止使用知乎所提供的全部服务。
+知乎是一个信息分享、传播及获取的平台，用户通过知乎发表的信息为公开的信息，其他第三方均可以通过知乎获取用户发表的信息，用户对任何信息的发表即认可该信息为公开的信息，并单独对此行为承担法律责任；任何用户不愿被其他第三人获知的信息都不应该在知乎上进行发表。
+用户承诺不得以任何方式利用知乎直接或间接从事违反中国法律以及社会公德的行为，知乎有权对违反上述承诺的内容予以删除。
+用户不得利用知乎服务制作、上载、复制、发布、传播或者转载如下内容：
+
+反对宪法所确定的基本原则的；
+危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；
+损害国家荣誉和利益的；
+煽动民族仇恨、民族歧视，破坏民族团结的；
+侮辱、滥用英烈形象，否定英烈事迹，美化粉饰侵略战争行为的；
+破坏国家宗教政策，宣扬邪教和封建迷信的；
+散布谣言，扰乱社会秩序，破坏社会稳定的；
+散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；
+侮辱或者诽谤他人，侵害他人合法权益的；
+含有法律、行政法规禁止的其他内容的信息。
+所有用户同意遵守知乎社区管理规定（试行）和知乎视频服务协议（试行）。
+机构用户同意遵守知乎机构号服务协议，以及知乎机构号使用规范（试行）。
+知乎有权对用户使用知乎的情况进行审查和监督，如用户在使用知乎时违反任何上述规定，知乎或其授权的人有权要求用户改正或直接采取一切必要的措施（包括但不限于更改或删除用户张贴的内容、暂停或终止用户使用知乎的权利）以减轻用户不当行为造成的影响。
+            <br /></textarea>
+
+            <br /><input type="radio" checked name="agree-radios" value="agree" />同意
+            <input type="radio" name="agree-radios" value="disagree" />不同意
+
+            <br /><input type="text" required placeholder="输入图中答案" name="checkcode" autocomplete="off" size="8"/>
+            <img src="images/checkImage.gif" alt="验证码" align="center" height="25" width="110" id="check-code-image" />
+
+            <br /><input type="submit" value="注册" />
+        </form>
+    </div>
+
+
+</body>
+</html>
