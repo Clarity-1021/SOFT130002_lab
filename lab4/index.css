@@ -1,0 +1,49 @@
+/*.navbar-brand{*/
+/*    padding: 6px 6px;*/
+/*}*/
+/*footer{*/
+/*    background-color: #333333;*/
+/*}*/
+/*.row{*/
+/*    margin-top: 30px;*/
+/*    margin-left: 110px;*/
+/*}*/
+/*.copyright{*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*}*/
+/*footer a{*/
+/*    color: white;*/
+/*}*/
+
+.carousel-inner img{
+    width: 100%;
+}
+
+.row img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.row{
+    margin-top: 20px;
+}
+
+.detail{
+    padding: 1% 5%;
+}
+
+.my-footer{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+}
+
+footer{
+    font-size: 18px;
+}
+
+.footer-icon{
+    font-size: 35px;
+}
