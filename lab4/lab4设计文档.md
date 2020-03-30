@@ -12,5 +12,5 @@
 
 如下：
 
-![sample](https://github.com/Clarity-1021/SOFT130002_lab/tree/master/lab4/images/home_1.JPG)
-![sample](https://github.com/Clarity-1021/SOFT130002_lab/tree/master/lab4/images/home_2.JPG)
+![sample](https://github.com/Clarity-1021/SOFT130002_lab/raw/master/lab4/images/home_1.JPG)
+![sample](https://github.com/Clarity-1021/SOFT130002_lab/raw/master/lab4/images/home_2.JPG)
