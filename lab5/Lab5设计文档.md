@@ -11,7 +11,7 @@ name参数，如果有就获取它的参数值给argumentvalue输入框的value
 次数最多的字符和次数了
 
 ## 网页截图
-![sample](./images/网页截图.png)
+![sample](https://github.com/Clarity-1021/SOFT130002_lab/raw/master/lab5/images/网页截图.png)
 ## gitHub截图
-
+![sample](https://github.com/Clarity-1021/SOFT130002_lab/raw/master/lab5/images/gitHub截图.png)
 
