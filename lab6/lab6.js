@@ -68,7 +68,7 @@ function testTime(){
 */
 function testMail(telephone,mail) {
     let telFlag = /^1[3-9]\d{9}$/.test(telephone);
-    let mailFlag = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(mail);
+    let mailFlag = /^([\w-])+@([a-z/d])+((\.[a-z]{2,3}){1,2})$/.test(mail);
     let printStr = "The telephone is ";
     if(telFlag)
         printStr += "right";
@@ -281,6 +281,7 @@ function DevelopingCountry() {
 console.log("第8题:");
 let a = new DevelopingCountry();
 a.sayHi();
+// console.log(a.name);
 
 function PoorCountry(){}
 PoorCountry.prototype = new Country()
@@ -290,11 +291,16 @@ PoorCountry.prototype.saySad = function () {
 }
 let b = new PoorCountry();
 b.saySad();
+// console.log(b.name);
 
-function DevelopedCountry() {}
-DevelopedCountry.prototype = Object.create(Country.prototype);
-DevelopedCountry.prototype.sayHappy = function () {
-    console.log("I am a Happy developed country.");
+function DevelopedCountry() {
+    Country.call(this);
+    this.sayHappy = function () {
+        console.log("I am a Happy developed country.");
+    }
 }
+DevelopedCountry.prototype = Object.create(Country.prototype);
+DevelopedCountry.prototype.constructor = DevelopedCountry;
 let c = new DevelopedCountry();
 c.sayHappy();
+// console.log(c.name);
