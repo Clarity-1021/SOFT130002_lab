@@ -33,7 +33,9 @@ test();
     ②使用console.log打印计数即可，到达一分钟提前停止也需要console.log相应的提示语句。
 */
 let outerTestTime = testTime();
-let int = setInterval("outerTestTime()",5000);
+let int = setInterval(() => {
+    outerTestTime();
+},5000);
 function testTime(){
     let mulTime = 0;
     return function innerTestTime () {
