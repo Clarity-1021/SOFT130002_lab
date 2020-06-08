@@ -55,20 +55,33 @@ function getLoginForm(){
       <div class="jumbotron">
         <h1>
 <?php
+//if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//    if(validLogin()){
+//        // add 1 day to the current time for expiry time
+//        $expiryTime = time()+60*60*24;
+//        setcookie("Username", $_POST['username'], $expiryTime);
+////        重新加载页面
+//        echo "<script language=JavaScript> location.replace(location.href);</script>";
+//    }
+//    else{
+//        echo "login unsuccessful";
+//    }
+//}
+//if(isset($_COOKIE['Username'])){
+//    echo "Welcome ".$_COOKIE['Username'];
+//}
+//else{
+//    echo "No Post detected";
+//}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(validLogin()){
-        // add 1 day to the current time for expiry time
-        $expiryTime = time()+60*60*24;
-//        setcookie("Username", $_POST['username'], $expiryTime);
         $_SESSION['Username']=$_POST['username'];
     }
     else{
         echo "login unsuccessful";
     }
 }
-//if(isset($_COOKIE['Username'])){
-//    echo "Welcome ".$_COOKIE['Username'];
-//}
 if(isset($_SESSION['Username'])){
     echo "Welcome ".$_SESSION['Username'];
 }
